@@ -1,0 +1,17 @@
+.layout{
+
+}
+
+.authForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label{
+        text-align: left;
+    }
+
+    input,select{
+        padding: 1rem;
+    }
+}

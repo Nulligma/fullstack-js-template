@@ -1,0 +1,94 @@
+.todoList {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            background-color: white;
+            color: black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                font-size: small;
+
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+    .create {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        background-color: #6b6b6b;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+
+        input,
+        button {
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .title {
+            flex: 1;
+        }
+    }
+}
+
+.item{
+    padding: 1rem;
+    background-color: #ebebbc;
+    border-radius: 0.25rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .title{
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        textarea{
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            flex:1;
+        }
+
+        .actions{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.layout {
+    min-height: 75vh;
+    min-width: 75vw;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
