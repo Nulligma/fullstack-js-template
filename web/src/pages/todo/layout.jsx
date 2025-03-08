@@ -1,27 +1,29 @@
-import { Outlet, useNavigate } from "react-router-dom"
-import styles from './todoStyles.module.css'
+import { Outlet, useNavigate } from "react-router-dom";
+import styles from "./todoStyles.module.css";
 import { useEffect, useState } from "react";
 import { useAppStore } from "../../main.jsx";
 
 const TodoLayout = () => {
-    const token = useAppStore((state) => state.token);
-    const navigate = useNavigate();
-    const [loading,setLoading] = useState(true);
-    const profile = useAppStore(state => state.profile);
+  const token = useAppStore((state) => state.token);
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+  const profile = useAppStore((state) => state.profile);
 
-    useEffect(() => {
-        if(!token) navigate("/auth/login");
-        else setLoading(false);
-    }, [token]);
+  useEffect(() => {
+    if (!token) navigate("/auth/login");
+    else setLoading(false);
+  }, [token, navigate]);
 
-    if(loading) return 'Loading auth...';
+  if (loading) return "Loading auth...";
 
-    return <div className="card">
-        <section className={styles.layout}>
-            <h3>{profile.name}'s Todos</h3>
-            <Outlet />
-        </section>
+  return (
+    <div className="card">
+      <section className={styles.layout}>
+        <h3>{profile.name}&apos;s Todos</h3>
+        <Outlet />
+      </section>
     </div>
-}
+  );
+};
 
 export default TodoLayout;

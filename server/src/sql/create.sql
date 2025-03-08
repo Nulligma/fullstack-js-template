@@ -1,7 +1,7 @@
 CREATE TABLE Users(
     user_id uuid primary key DEFAULT gen_random_uuid(),
     user_email VARCHAR(100) UNIQUE NOT NULL,
-    user_password VARCHAR(30) NOT NULL
+    user_password VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Job(

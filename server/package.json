@@ -2,28 +2,28 @@
   "name": "server",
   "version": "0.0.1",
   "description": "express server",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "dev": "node server.js"
   },
   "author": "shantanu kulkarni",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "drizzle-orm": "^0.35.3",
-    "drizzle-zod": "^0.5.1",
-    "express": "^4.21.1",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.40.0",
+    "drizzle-zod": "^0.7.0",
+    "express": "^4.21.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.2",
+    "mongoose": "^8.12.1",
     "postgres": "^3.4.5"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.26.2"
+    "drizzle-kit": "^0.30.5"
   }
 }
